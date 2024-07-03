@@ -1,0 +1,28 @@
+<template>
+    <div class="slgs-grid container">
+        
+        <div class="slds-col">
+
+            <template if:false={showAccountCreation}>
+                <div class="loading" if:true={isLoading}>
+                    Loading...
+                </div>
+
+                <div class="content" if:false={isLoading}>
+                    <h1>Accounts</h1>
+                    <template class="content__wrapper" for:each={accounts} for:item="account">
+                        <c-account-component key={account.Id} account={account}></c-account-component>
+                    </template>
+                </div>
+
+                <div class="new_account">
+                    <lightning-button label="Create new Account" onclick={newAccount} class="slds-m-left_x-small"></lightning-button>
+                </div>
+            </template>
+
+            <c-new-account if:true={showAccountCreation}></c-new-account>
+
+        </div>
+
+    </div>
+</template>

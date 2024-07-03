@@ -1,0 +1,16 @@
+<template>
+    
+    <div class="form_account">
+        
+        <lightning-input type="text" field-name="firstName" label="First Name" placeholder="Enter First Name" onchange={onChangeHandler}></lightning-input>
+
+        <lightning-input type="text" field-name="lastName" label="Last Name" placeholder="Enter Last Name" onchange={onChangeHandler}></lightning-input>
+
+        <lightning-input type="email" field-name="email" label="Enail" placeholder="Enter Email" onchange={onChangeHandler}></lightning-input>
+
+        <lightning-input type="text" field-name="phone" label="Phone" placeholder="Enter Phone Number" onchange={onChangeHandler}></lightning-input>
+
+        <lightning-button label="Submit Account" onclick={newAccountHandler} class="slds-m-left_x-small"></lightning-button>
+    </div>
+
+</template>
